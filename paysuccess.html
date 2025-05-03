@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - Magnet Marvels</title>
+    <link rel="stylesheet" href="paysuccess.css">
+    <link href="https://fonts.googleapis.com/css2?family=Joan&family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Payment Success Section -->
+    <div class="payment-success">
+        <div class="success-box">
+            <div class="success-title">Payment Successful</div>
+            <div class="success-message">
+                Thank you for your purchase at Magnet Marvels.<br/>
+                Your order has been confirmed and is being processed.
+            </div>
+            <div class="order-details">
+                <span>Order Details:</span> <span class="highlight">#1234</span>
+            </div>
+            <div class="order-id">
+                <span>Order ID#:</span> <span class="highlight">5 Magnets + 1 Free</span>
+            </div>
+            <div class="total-amount">
+                <span>Total Amount:</span> <span class="highlight">$25</span>
+            </div>
+        </div>
+        <div class="confirm-button">
+            <button onclick="sendOrderDetails()" style="text-decoration: none; color: white; font-size: 36px; font-family: 'Joan', serif; font-weight: 400; text-align: center; line-height: 60px; background: #2D26E6; border: none; border-radius: 5px; width: 200px; height: 60px; cursor: pointer;">
+                Confirm
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function sendOrderDetails() {
+            const orderDetails = "5 Magnets + 1 Free";
+            const orderId = "1234";
+            const totalAmount = "25";
+
+            fetch('http://localhost:3000/save-order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ orderDetails, orderId, totalAmount }),
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Notify the user
+                window.location.href = "index.html"; // Redirect to the homepage
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to save the order.');
+            });
+        }
+    </script>
+</body>
+</html>

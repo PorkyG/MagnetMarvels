@@ -1,0 +1,362 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Joan', serif;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    height: 130px;
+    background: #918EF1;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100px; /* Adjusted width for better visibility */
+    height: 100px; /* Adjusted height for better visibility */
+    border-radius: 50%; /* Keeps the logo circular */
+    object-fit: cover; /* Ensures the logo fits nicely within its container */
+    margin: 100; /* Removes any extra margin */
+    align-items: center;
+    justify-content
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    flex-grow: 1; /* Ensures the nav links take up available space */
+}
+
+.nav-link {
+    color: black;
+    font-size: 24px;
+    font-family: Joan;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+/* Contact Button */
+.contact-button {
+    width: 177px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2D26E6;
+    border-radius: 5px;
+    background-color: white;
+    flex-shrink: 0; /* Prevents the button from resizing or moving */
+}
+
+.contact-button a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: 'Joan', serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Landing Section */
+.landing-section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 5px;
+    outline: 1px solid #2D26E6;
+    outline-offset: -1px;
+    background-color: #f9f9f9;
+}
+
+.landing-title {
+    color: black;
+    font-size: 64px;
+    font-family: 'Joan', serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.landing-subtitle {
+    color: #2D26E6;
+    font-size: 24px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+}
+
+.frame-title {
+    color: #2D26E6;
+    font-size: 32px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.frame-text {
+    color: black;
+    font-size: 28px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.info-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #2D26E6;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.info-title {
+    font-size: 32px;
+    font-family: 'Irish Grover', cursive;
+    color: #2D26E6;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-size: 28px;
+    font-family: 'Irish Grover', cursive;
+    color: black;
+}
+
+/* General Text Styles */
+.text-black {
+    color: black;
+    font-family: 'Joan', serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.text-blue {
+    color: #2D26E6;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.text-large {
+    font-size: 64px;
+}
+
+.text-medium {
+    font-size: 40px;
+}
+
+.text-small {
+    font-size: 32px;
+}
+
+.text-xsmall {
+    font-size: 28px;
+}
+
+.text-xxsmall {
+    font-size: 24px;
+}
+
+/* Mission Section */
+.mission-section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #918EF1;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mission-image {
+    width: 640px;
+    height: 640px;
+    position: absolute;
+    left: 68px;
+    top: 88px;
+    border-radius: 5px;
+}
+
+.mission-subtitle {
+    position: absolute;
+    left: 756px;
+    top: 88px;
+    text-align: right;
+    color: #2D26E6;
+    font-size: 24px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.mission-title {
+    position: absolute;
+    left: 756px;
+    top: 176px;
+    color: black;
+    font-size: 40px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.mission-text {
+    position: absolute;
+    left: 756px;
+    top: 299px;
+    width: 497px;
+    color: black;
+    font-size: 32px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Marvel Makers Section */
+.marvel-makers-title {
+    color: #2D26E6;
+    font-size: 48px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.marvel-makers-description {
+    color: black;
+    font-size: 32px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.marvel-makers-box {
+    width: 428px;
+    height: 256px;
+    border: 1px solid #2D26E6;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+}
+
+.marvel-makers-box-title {
+    color: #2D26E6;
+    font-size: 24px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.marvel-makers-box-text {
+    color: black;
+    font-size: 24px;
+    font-family: 'Irish Grover', cursive;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: auto;
+    background: #918EF1;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+
+.footer-text {
+    color: black;
+    font-size: 24px;
+    font-family: Joan;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: #2D26E6;
+    font-size: 24px;
+    font-family: Irish Grover;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: black; /* Change color on hover */
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center icons vertically */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px;
+    padding: 0px; /* Add padding to ensure icons are fully visible */
+    height: fit-content; /* Allow the container to adjust to the content */
+}
+
+.footer-icon {
+    width: 48px; /* Set a fixed width for the icons */
+    height: 48px; /* Set a fixed height for the icons */
+    object-fit: contain; /* Ensure the icons fit nicely within their container */
+    border-radius: 50%; /* Keep the icons circular */
+    display: block; /* Ensure the icons are displayed as block elements */
+    margin: 0 auto; /* Center the icons within their boxes */
+}

@@ -1,0 +1,5 @@
+MagnetMarvels/
+├── index.html
+├── styles.css
+├── Images/
+│   └── Frame 2.jpg
