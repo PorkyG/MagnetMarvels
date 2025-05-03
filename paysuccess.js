@@ -10,7 +10,7 @@ app.post('/save-order', (req, res) => {
     const { orderDetails, orderId, totalAmount } = req.body;
 
     // Define the file path
-    const filePath = path.join(__dirname, 'Jobs', `Order_${orderId}.txt`);
+    const filePath = path.join('C:\\Users\\porky\\Desktop\\MagnetImages\\Jobs', `Order_${orderId}.txt`);
 
     // Create the content for the A4 file
     const fileContent = `
