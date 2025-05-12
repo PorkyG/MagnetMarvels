@@ -10,7 +10,7 @@
 <body>
     <!-- Header Section -->
     <div class="header" style="width: 100%; height: 130px; background: #918EF1; border-radius: 5px; position: relative; overflow: hidden;">
-        <img class="logo" style="width: 122px; height: 122px; position: absolute; top: 4px; left: 50%; transform: translateX(-600%); border-radius: 9999px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Screenshot 2025-04-30 191645.png" alt="Logo">
+        <img class="logo" style="width: 122px; height: 122px; position: absolute; top: 4px; left: 50%; transform: translateX(-600%); border-radius: 9999px;" src="assets/images/Screenshot 2025-04-30 191645.png" alt="Logo">
         <div class="nav-links">
             <div class="nav-link" style="position: absolute; left: 579px; top: 52px; text-align: center; color: black; font-size: 24px; font-family: Joan; font-weight: 400; word-wrap: break-word;">
                 <a href="index.html" style="text-decoration: none; color: black;">Home</a>
@@ -39,7 +39,7 @@
         </div>
         <!-- Image Section -->
         <div>
-            <img style="width: 560px; height: 560px; border-radius: 5px; border: 1px #2D26E6 solid;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\03.jpg" alt="Landing Image" />
+            <img style="width: 560px; height: 560px; border-radius: 5px; border: 1px #2D26E6 solid;" src="assets/images/Gallery/03.jpg" alt="Landing Image" />
         </div>
     </div>
 
@@ -57,19 +57,19 @@
             <!-- Image 5 -->
             <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/05.jpg" alt="Gallery Image 5" />
             <!-- Image 6 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\06.jpg"alt="Gallery Image 6" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/06.jpg" alt="Gallery Image 6" />
             <!-- Image 7 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\08.webp"alt="Gallery Image 7" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/08.webp" alt="Gallery Image 7" />
             <!-- Image 8 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\09.webp"alt="Gallery Image 8" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/09.webp" alt="Gallery Image 8" />
             <!-- Image 9 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\010.webp" alt="Gallery Image 9" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/010.webp" alt="Gallery Image 9" />
             <!-- Image 10 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\011.jpg" alt="Gallery Image 10" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/011.jpg" alt="Gallery Image 10" />
             <!-- Image 11 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\013.webp" alt="Gallery Image 11" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/013.webp" alt="Gallery Image 11" />
             <!-- Image 12 -->
-            <img style="width: 224px; height: 224px; border-radius: 5px;" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Gallery\Frame 2.jpg"alt="Gallery Image 12" />
+            <img style="width: 224px; height: 224px; border-radius: 5px;" src="assets/images/Gallery/Frame 2.jpg" alt="Gallery Image 12" />
         </div>
     </div>
 
@@ -90,7 +90,7 @@
                 <label for="upload-files" style="display: block; width: 100%; height: 100%; text-align: center; line-height: 56px; color: black; font-size: 24px; font-family: 'Joan', serif; font-weight: 400; cursor: pointer;">
                     Choose Files
                 </label>
-                <input id="upload-files" type="file" accept="image/*" multiple style="display: none;">
+                <input id="upload-files" type="file" accept="image/*" multiple style="display: none;" onchange="uploadImages(event)">
             </div>
         </div>
 
@@ -118,25 +118,52 @@
     <div style="width: 100%; height: auto; position: relative; margin-top: 40px; padding: 20px; box-sizing: border-box; display: flex; justify-content: center;">
         <div style="width: 540px; height: 860px; position: relative; background: white; overflow: hidden; outline: 1px #2D26E6 solid; outline-offset: -1px; border-radius: 10px; padding: 20px;">
             <!-- Box 1 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 75px; top: 106px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 20px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box1">
+                <img id="image1" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image1')" style="left: 75px; top: 106px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
             <!-- Box 2 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 355px; top: 106px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 300px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box2">
+                <img id="image2" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image2')" style="left: 355px; top: 106px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
             <!-- Box 3 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 75px; top: 386px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 20px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box3">
+                <img id="image3" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image3')" style="left: 75px; top: 386px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
             <!-- Box 4 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 355px; top: 386px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 300px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box4">
+                <img id="image4" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image4')" style="left: 355px; top: 386px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
             <!-- Box 5 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 75px; top: 666px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 20px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box5">
+                <img id="image5" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image5')" style="left: 75px; top: 666px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
             <!-- Box 6 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;"></div>
-            <div class="a4-edit-text" style="left: 355px; top: 666px; position: absolute;">Edit Image</div>
+            <div style="width: 220px; height: 220px; left: 300px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box6">
+                <img id="image6" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
+            </div>
+            <button onclick="editImage('image6')" style="left: 355px; top: 666px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
+                Edit Image
+            </button>
         </div>
     </div>
+
+    <!-- Hidden File Input -->
+    <input id="fileInput" type="file" accept="image/*" style="display: none;" onchange="updateImage(event)">
 
      <!-- Confirm Button Section -->
      <div style="width: 100%; height: auto; position: relative; margin-top: 40px; padding: 20px; box-sizing: border-box; display: flex; justify-content: center;">
@@ -149,7 +176,7 @@
     <!-- Footer -->
 <div class="footer">
     <div class="footer-logo">
-        <img src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Screenshot 2025-04-30 191645.png" alt="Footer Logo">
+        <img src="assets/images/Screenshot 2025-04-30 191645.png" alt="Footer Logo">
     </div>
     <div class="footer-text">© 2023 Magnet Marvels. All rights reserved.</div>
     <div class="footer-links">
@@ -158,13 +185,13 @@
     </div>
     <div class="footer-icons">
     <a href="https://twitter.com" class="footer-icon-link">
-        <img class="footer-icon" src= "C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Twitter.svg"alt="Twitter Icon">
+        <img class="footer-icon" src="assets/images/Twitter.svg"alt="Twitter Icon">
     </a>
     <a href="https://facebook.com" class="footer-icon-link">
-        <img class="footer-icon" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Facebook.svg"alt="Facebook Icon">
+        <img class="footer-icon" src="assets/images/Facebook.svg"alt="Facebook Icon">
     </a>
     <a href="https://instagram.com" class="footer-icon-link">
-        <img class="footer-icon" src="C:\Users\porky\Desktop\MagnetImages\MagnetMarvels\assets\images\Instagram.svg" alt="Instagram Icon">
+        <img class="footer-icon" src="assets/images/Instagram.svg" alt="Instagram Icon">
     </a>
 </div>
 </div>
