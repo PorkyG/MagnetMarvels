@@ -85,13 +85,13 @@
             <div style="text-align: center; color: black; font-size: 22px; font-family: 'Joan', serif; font-weight: 400; word-wrap: break-word; margin-top: 10px;">
                 Have a custom design in mind? Upload your image(s), and we'll place them in the boxes below!
             </div>
-            <!-- File Upload Button -->
-            <div style="width: 157px; height: 56px; background: #D9D9D9; border: 1px #2D26E6 solid; text-align: center; border-radius: 5px; margin-top: 20px;">
-                <label for="upload-files" style="display: block; width: 100%; height: 100%; text-align: center; line-height: 56px; color: black; font-size: 24px; font-family: 'Joan', serif; font-weight: 400; cursor: pointer;">
-                    Choose Files
-                </label>
-                <input id="upload-files" type="file" accept="image/*" multiple style="display: none;" onchange="uploadImages(event)">
-            </div>
+           <!-- File Upload Button -->
+<div style="width: 157px; height: 56px; background: #D9D9D9; border: 1px #2D26E6 solid; text-align: center; border-radius: 5px; margin-top: 20px;">
+    <label for="upload-files" style="display: block; width: 100%; height: 100%; text-align: center; line-height: 56px; color: black; font-size: 24px; font-family: 'Joan', serif; font-weight: 400; cursor: pointer;">
+        Choose Files
+    </label>
+    <input id="upload-files" type="file" accept="image/*" multiple style="display: none;" onchange="uploadImages(event)">
+</div>
         </div>
 
         <!-- Pricing Box -->
@@ -115,52 +115,45 @@
     </div>
 
     <!-- A4 Section -->
-    <div style="width: 100%; height: auto; position: relative; margin-top: 40px; padding: 20px; box-sizing: border-box; display: flex; justify-content: center;">
-        <div style="width: 540px; height: 860px; position: relative; background: white; overflow: hidden; outline: 1px #2D26E6 solid; outline-offset: -1px; border-radius: 10px; padding: 20px;">
-            <!-- Box 1 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box1">
-                <img id="image1" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image1')" style="left: 75px; top: 106px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
-            <!-- Box 2 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 20px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box2">
-                <img id="image2" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image2')" style="left: 355px; top: 106px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
-            <!-- Box 3 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box3">
-                <img id="image3" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image3')" style="left: 75px; top: 386px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
-            <!-- Box 4 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 300px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box4">
-                <img id="image4" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image4')" style="left: 355px; top: 386px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
-            <!-- Box 5 -->
-            <div style="width: 220px; height: 220px; left: 20px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box5">
-                <img id="image5" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image5')" style="left: 75px; top: 666px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
-            <!-- Box 6 -->
-            <div style="width: 220px; height: 220px; left: 300px; top: 580px; position: absolute; background: #D0CFFB; border-radius: 10px;" id="box6">
-                <img id="image6" src="" alt="Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: none;">
-            </div>
-            <button onclick="editImage('image6')" style="left: 355px; top: 666px; position: absolute; background: #2D26E6; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">
-                Edit Image
-            </button>
+<div class="a4-section">
+    <div class="a4-container">
+        <!-- Box 1 -->
+        <div class="a4-box" id="box1">
+            <img id="image1" src="" alt="Placeholder">
         </div>
+        <button class="edit-button" style="left: 75px; top: 106px;" onclick="editImage('image1')">Edit Image</button>
+
+        <!-- Box 2 -->
+        <div class="a4-box" id="box2" style="left: 300px; top: 20px;">
+            <img id="image2" src="" alt="Placeholder">
+        </div>
+        <button class="edit-button" style="left: 355px; top: 106px;" onclick="editImage('image2')">Edit Image</button>
+
+        <!-- Box 3 -->
+        <div class="a4-box" id="box3" style="left: 20px; top: 300px;">
+            <img id="image3" src="" alt="Placeholder">
+        </div>
+        <button class="edit-button" style="left: 75px; top: 386px;" onclick="editImage('image3')">Edit Image</button>
+
+        <!-- Box 4 -->
+        <div class="a4-box" id="box4" style="left: 300px; top: 300px;">
+            <img id="image4" src="" alt="Placeholder">
+        </div>
+        <button class="edit-button" style="left: 355px; top: 386px;" onclick="editImage('image4')">Edit Image</button>
+
+        <!-- Box 5 -->
+        <div class="a4-box" id="box5" style="left: 20px; top: 580px;">
+            <img id="image5" src="" alt="Placeholder">
+        </div>
+        <button class="edit-button" style="left: 75px; top: 666px;" onclick="editImage('image5')">Edit Image</button>
+
+        <!-- Box 6 -->
+        <div class="a4-box" id="box6" style="left: 300px; top: 580px;">
+            <img id="image6" src="" alt="Placeholder">
+        </div>
+        <button class="edit-button" style="left: 355px; top: 666px;" onclick="editImage('image6')">Edit Image</button>
     </div>
+</div>
 
     <!-- Hidden File Input -->
     <input id="fileInput" type="file" accept="image/*" style="display: none;" onchange="updateImage(event)">
