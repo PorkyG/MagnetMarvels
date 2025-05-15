@@ -18,14 +18,91 @@
     font-weight: 400;
 }
 
-/* A4 Section Text Style */
-.a4-edit-text {
-    color: black;
-    font-size: 24px;
+/* A4 Section */
+.a4-section {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center the A4 container horizontally */
+    align-items: center; /* Center the A4 container vertically */
+    background: #f9f9f9; /* Light background for better visibility */
+}
+
+.a4-container {
+    width: 540px;
+    height: 860px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    outline: 1px solid #2D26E6; /* Add a border to highlight the container */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap if needed */
+    gap: 20px; /* Add spacing between boxes */
+    justify-content: center; /* Center the boxes within the container */
+}
+
+/* A4 Box */
+.a4-box {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    background: #D0CFFB; /* Light purple background for empty boxes */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure images do not overflow the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+/* A4 Box Image */
+.a4-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits nicely within the box */
+    border-radius: 10px;
+    display: block; /* Ensure the image is visible */
+    visibility: visible; /* Ensure the image is not hidden */
+}
+
+/* Edit Text */
+.edit-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
     font-family: 'Joan', serif;
     font-weight: 400;
-    word-wrap: break-word;
+    text-shadow: 1px 1px 2px black; /* Add a shadow for better readability */
+    cursor: pointer;
+    z-index: 10; /* Ensure the text appears above the image */
     text-align: center;
+}
+
+/* Buttons */
+.edit-button {
+    position: absolute;
+    background: #2D26E6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Joan', serif;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 10; /* Ensure the button appears above the image */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Header Section */
@@ -167,4 +244,21 @@
     font-weight: 400;
     text-align: center;
     line-height: 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .a4-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .a4-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .edit-text {
+        font-size: 16px;
+    }
 }
