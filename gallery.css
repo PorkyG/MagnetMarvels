@@ -203,13 +203,14 @@ body {
 }
 
 .footer-link {
-    text-decoration: none;
-    color: white;
-    font-size: 36px;
-    font-family: 'Joan', serif;
+    color: #2D26E6;
+    font-size: 24px;
+    font-family: 'Irish Grover', cursive;
     font-weight: 400;
-    text-align: center;
-    line-height: 60px;
+    word-wrap: break-word;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .footer-link:hover {
